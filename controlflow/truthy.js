@@ -28,7 +28,7 @@ if (Object.keys(emptyObj).length === 0) {
 
 let val1;
 // val1 = 5 ?? 10
-// val1 = null ?? 10
+// val1 = null ?? 10 // null call coalescing operator checks value is assigned or not 
 // val1 = undefined ?? 15
 val1 = null ?? 10 ?? 20
 
