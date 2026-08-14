@@ -10,6 +10,7 @@
 
 const myNums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
+//return is used in scope for getting answer warna error throw kardega 
 // const newNums = myNums.filter( (num) => {
 //     return num > 4
 // } )
