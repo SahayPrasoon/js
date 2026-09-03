@@ -59,3 +59,19 @@ promiseFour.then((user)=>{
     console.log(error);
 }).finally(() => console.log("The promise is either resolved or rejected")) //this will default execution
 
+
+
+const promiseFive = new Promise(function(resolve, reject){
+    setTimeout(function(){
+        let error = false;
+        if(!error){
+            resolve({"username": "js"})
+        }else{
+            reject("error: js went wrong")
+        }
+    },1000)
+})
+
+promiseFive.then((user)=>{
+    
+})
