@@ -49,11 +49,13 @@ const promiseFour = new Promise(function(resolve, reject){
     },1000)
     //chianing of .then and .catch is used to handle the resolve and reject function of promise
     //chaining like this is used to handle the async task and its result in a better way and also useful for DB 
-}).then(function(user){
-    console.log(user);
-}).then(function(){
-    console.log("promise is consumed");
 })
-.catch(function(error){
+
+promiseFour.then((user)=>{
+    console.log(user)
+}).then((user)=>{
+    console.log("promise is consumed");
+}).catch((error)=>{
     console.log(error);
 })
+
