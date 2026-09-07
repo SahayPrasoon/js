@@ -6,8 +6,8 @@
     <title>Closure aur chai</title>
 </head>
 <body style="background-color: #313131;">
-    <!-- <button id="orange">Orange</button>
-    <button id="green">Green</button> -->
+    <button id="orange">Orange</button>
+    <button id="green">Green</button>
 </body>
 
     <script>
@@ -38,17 +38,18 @@
     // outer()
     // console.log("TOO OUTER", username);
 
+//idhar memory ka khel hai jaise hi execute kardiye tab bhi pura execute hone ke baad closure mei pura memory se uth kar jayega to get executed
+    // function makeFunc() {
+    //     const name = "Mozilla";
+    //     //pura lexical scope jaa rha na ki sirf executional context
+    //     function displayName() {
+    //         console.log(name);
+    //     }
+    //     return displayName;
+    // }
 
-    function makeFunc() {
-        const name = "Mozilla";
-        function displayName() {
-            console.log(name);
-        }
-        return displayName;
-    }
-
-    const myFunc = makeFunc();
-    myFunc();
+    // const myFunc = makeFunc();
+    // myFunc();
 
     </script>
     <script>
@@ -59,16 +60,16 @@
         //     document.body.style.backgroundColor = `green`
         // }
 
-        // function clickHandler(color){
-        //     // document.body.style.backgroundColor = `${color}`
-
-        //     return function(){
-        //         document.body.style.backgroundColor = `${color}`
-        //     }
-        // }
-
-        // document.getElementById('orange').onclick = clickHandler("orange")
-        // document.getElementById('green').onclick = clickHandler("green")
+        function clickHandler(color){
+            // document.body.style.backgroundColor = `${color}`
+            //idhar hum isko function ko return type mei dekar hum usse executable bana rhe onclick par 
+            return function(){
+                document.body.style.backgroundColor = `${color}`
+            }
+        }
+        //without return statement woh sirf ek direct execute ho jata hai 
+        document.getElementById('orange').onclick = clickHandler("orange")
+        document.getElementById('green').onclick = clickHandler("green")
 
     </script>
 </html>
