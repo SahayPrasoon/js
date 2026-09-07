@@ -20,9 +20,10 @@ class Teacher extends User{ //extends keyword to access the class above waha obj
     }
 }
 
-const chai = new Teacher("chai", "chai@teacher.com", "123")
+const chai = new Teacher("chai", "chai@teacher.com", "123") //this is teacher which itself is extending the user class 
 
 chai.logMe()
 const masalaChai = new User("masalaChai")
 
 masalaChai.logMe()
+console.log(chai instanceof User)
