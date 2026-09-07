@@ -1,6 +1,6 @@
 const User = {
     _email: 'h@hc.com',
-    _password: "abc",
+    _password: "abc", //_ defines it as a private property and user ko alag snormal user are not used 
 
 
     get email(){
